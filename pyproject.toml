@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "labelme-to-yolo"
-version = "0.1.0"
+version = "0.2.0"
 description = "A tool to convert LabelMe dataset annotations into YOLO format for instance segmentation."
 license = "MIT"
 authors = ["Tlaloc-Es <dev@tlaloc-es.com>"]
@@ -34,7 +34,7 @@ git_hooks_install = "pre-commit install"
 git_hooks_update = "pre-commit autoupdate"
 
 [tool.commitizen]
-version = "0.1.0"
+version = "0.2.0"
 version_files = [
     "pyproject.toml:^version"
 ]
