@@ -7,11 +7,11 @@
 
 </div>
 
-Convert [LabelMe](https://github.com/wkentaro/labelme) format into [YoloV7](https://github.com/WongKinYiu/yolov7) format for instance segmentation.
+Convert [LabelMe](https://github.com/wkentaro/labelme) format into [Ultralytics Yolo](https://github.com/ultralytics/ultralytics) format for instance segmentation.
 
 ## Installation [![PyPI](https://img.shields.io/pypi/v/labelme2yolo.svg)](https://pypi.org/project/labelme2yolo/)
 
-You can install `labelme2yolo` from [Pypi](https://pypi.org/project/labelme-to-yolo/). It's going to install the library itself and its prerequisites as well.
+You can install `labelme-to-yolo` from [Pypi](https://pypi.org/project/labelme-to-yolo/). It's going to install the library itself and its prerequisites as well.
 
 ```bash
 pip install labelme2yolo
@@ -68,7 +68,8 @@ datasets
 │       └── img_7.txt
 ├── labels.txt
 ├── test.txt
-└── train.txt
+├── train.txt
+└── project.yml
 ```
 
 ## Donation
