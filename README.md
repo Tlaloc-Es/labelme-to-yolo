@@ -9,7 +9,7 @@
 
 Convert [LabelMe](https://github.com/wkentaro/labelme) format into [Ultralytics Yolo](https://github.com/ultralytics/ultralytics) format for instance segmentation.
 
-## Installation [![PyPI](https://img.shields.io/pypi/v/labelme2yolo.svg)](https://pypi.org/project/labelme2yolo/)
+## Installation [![PyPI](https://img.shields.io/pypi/v/labelme2yolo.svg)](https://pypi.org/project/labelme-to-yolo/)
 
 You can install `labelme-to-yolo` from [Pypi](https://pypi.org/project/labelme-to-yolo/). It's going to install the library itself and its prerequisites as well.
 
