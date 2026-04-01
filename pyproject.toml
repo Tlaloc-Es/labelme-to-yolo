@@ -1,6 +1,6 @@
 [project]
 name = "labelme-to-yolo"
-version = "0.2.0"
+version = "0.2.1"
 description = "A tool to convert LabelMe dataset annotations into YOLO format for instance segmentation."
 license = { text = "MIT" }
 authors = [{ name = "Tlaloc-Es", email = "dev@tlaloc-es.com" }]
@@ -35,7 +35,7 @@ test = "pytest"
 test-cov = "pytest --cov=labelme_to_yolo --cov-report=term-missing --cov-report=html"
 
 [tool.commitizen]
-version = "0.2.0"
+version = "0.2.1"
 version_files = ["pyproject.toml:^version"]
 tag_format = "$version"
 
