@@ -1,9 +1,13 @@
+from typing import Annotated
+
 from pydantic import BaseModel, Field
+
+Point = Annotated[list[float], Field(min_length=2, max_length=2)]
 
 
 class LabelMeShape(BaseModel):
     label: str
-    points: list[list[float]] = [Field(..., min_items=2, max_items=2)]
+    points: list[Point]
     shape_type: str
 
 
@@ -23,11 +27,6 @@ class OutputPaths(BaseModel):
     labels_train_path: str
     labels_val_path: str
     labels_test_path: str
-
-
-class SplitedDataset(BaseModel):
-    test: list[str]
-    train: list[str]
 
 
 class FileNameAndExtension(BaseModel):

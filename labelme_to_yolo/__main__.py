@@ -55,7 +55,7 @@ def process(values: ndarray, width: int, height: int) -> list[float]:
 
 def write_yolo_yml(yolo_yml: YoloYML, output_path: str) -> None:
     with open(os.path.join(output_path, "project.yml"), "w", encoding="utf-8") as file:
-        yaml.dump(yolo_yml.dict(), file)
+        yaml.dump(yolo_yml.model_dump(), file)
 
 
 def write_shapes(
@@ -154,7 +154,12 @@ def process_write_shapes(
 
         shutil.copyfile(source_image_path, output_image_path)
 
-        output_image_path = output_image_path.replace(dataset_path, ".")
+        # Make path relative to dataset_path for the txt file
+        try:
+            output_image_path = os.path.relpath(output_image_path, dataset_path)
+        except ValueError:
+            # If paths are on different drives, keep absolute path
+            pass
 
         for pyligon in shape.polygons:
             with open(
